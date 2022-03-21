@@ -6,3 +6,10 @@ CREATE TABLE animals (
   neutered boolean,
   weight_kg decimal
 );
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name varchar(20),
+    age integer
+);
+
+
