@@ -35,6 +35,12 @@ UPDATE animals SET weight_kg = -1 * weight_kg WHERE weight_kg < 0;
 COMMIT;
 SELECT COUNT(*) FROM animals;
 SELECT COUNT(escape_attempts) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT MAX(escape_attempts) FROM animals;
+--neutered Boarmon with 7 escape_attempts
+
+SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth >= '01-01-1990' AND date_of_birth <= '12-31-2000' GROUP BY species;
+
 
 
 
