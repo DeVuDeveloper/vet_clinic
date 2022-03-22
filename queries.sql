@@ -1,5 +1,5 @@
 SELECT * FROM animals WHERE name LIKE '%mon';
-SELECT name FROM animals WHERE date_of_birth BETWEEN '01-01-2016' AND '01-12-2019';
+SELECT name FROM animals WHERE date_of_birth BETWEEN '01-01-2016' AND '2019-01-12';
 SELECT name FROM animals WHERE neutered='true' AND escape_attempts < 3;
 SELECT date_of_birth, name FROM animals WHERE name='Agumon' OR name='Pikachu';
 SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
@@ -23,7 +23,7 @@ ROLLBACK;
 COMMIT; 
 SELECT * FROM animals;
 BEGIN;
-DELETE FROM animals WHERE date_of_birth > '01-01-2022';
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SELECT * FROM animals;
 SAVEPOINT deleted_ditto;
 UPDATE animals SET weight_kg = -1 * weight_kg;
@@ -38,7 +38,7 @@ SELECT COUNT(escape_attempts) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) FROM animals;
 SELECT MAX(escape_attempts) FROM animals;
 --neutered Boarmon with 7 escape_attempts
-SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth >= '01-01-1990' AND date_of_birth <= '12-31-2000' GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31' GROUP BY species;
 
 SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owners.id = 4;
 SELECT animals.name FROM animals JOIN species on species.id = animals.species_id where species.id = 2;
