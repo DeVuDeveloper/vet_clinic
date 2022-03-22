@@ -38,8 +38,8 @@ SELECT COUNT(escape_attempts) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) FROM animals;
 SELECT MAX(escape_attempts) FROM animals;
 --neutered Boarmon with 7 escape_attempts
-
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth >= '01-01-1990' AND date_of_birth <= '12-31-2000' GROUP BY species;
+
 SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owners.id = 4;
 SELECT animals.name FROM animals JOIN species on species.id = animals.species_id where species.id = 2;
 SELECT animals.name, owners.fulL_name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
@@ -52,15 +52,3 @@ SELECT * FROM animals JOIN owners ON animals.owner_id = owners.id
 WHERE animals.escape_attempts = 0 AND owners.id = 5;
 SELECT owners.full_name, COUNT(*) AS count FROM owners JOIN animals ON animals.owner_id=owners.id
 GROUP BY owners.id ORDER BY count DESC limit 1;
-
-
-
-
-
-
-
-
-
-
-
-
