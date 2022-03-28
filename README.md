@@ -6,6 +6,10 @@
 ## Diagram
 ![Screenshot](img/screenshot.png)
 
+## Oprimization
+# Optimized  slow queries in a database using the EXPLAIN ANALYZE to compare the execution times before and after optimization.
+![Optimization](img/optimization.png)
+
 
 
 ## General info
