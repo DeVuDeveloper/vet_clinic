@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Vet Clinic
 
 
@@ -46,10 +44,6 @@ Feel free to check the [issues page](https://github.com/VuDej/vet_clinic/issues/
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-A special thanks to Microverse.
 
 ## 📝 License
 
